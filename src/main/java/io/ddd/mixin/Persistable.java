@@ -8,7 +8,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 /**
- * 说明：
+ * 说明：持久化操作方法
  *
  * @author 周靖捷
  * Created by 周靖捷 on 2018/1/5.

@@ -1,30 +1,35 @@
 package io.ddd.core.tools;
 
 import io.ddd.core.Interaction;
+import io.ddd.core.delegate.Delegate;
 import org.junit.Test;
 
 import java.util.function.Function;
 
 public class $Test {
+    public static void main(String[] args) {
+        Worker worker = new Worker("1");
+        IWorker IWorker = $.cast(IWorker.class, worker);
+        IWorker.say();
+    }
 
-    public static class WorkerData {
+    public static class Worker {
         String id;
 
-        public WorkerData(String id) {
+        public Worker(String id) {
             this.id = id;
         }
     }
 
-    public static interface Worker extends Interaction<WorkerData> {
-        public default void say() {
+    public interface IWorker extends Interaction<Worker> {
+        default void say() {
             System.out.println(that().id);
         }
     }
-    Function<String,String> function;
 
     @Test
-    public void case001_useTools() throws Exception {
-        Worker worker = $.cast(Worker.class, new WorkerData("A"));
-        worker.say();
+    public void case001_useTools() {
+        IWorker IWorker = $.cast(IWorker.class, new Worker("A"));
+        IWorker.say();
     }
 }
