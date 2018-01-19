@@ -23,3 +23,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+domain-driven-samples/src/
+domain-driven-samples/target/classes/
+domain-driven-samples/target/maven-archiver/
+domain-driven-samples/target/maven-status/
+domain-driven-tools/src/main/resources/
+domain-driven-tools/target/generated-sources/
+domain-driven-tools/target/generated-test-sources/
+domain-driven-tools/target/maven-archiver/
+domain-driven-tools/target/maven-status/
