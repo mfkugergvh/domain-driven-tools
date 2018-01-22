@@ -11,6 +11,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>domain-driven-samples</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>auto-account-keeper</module>
+    </modules>
 
     <properties>
         <maven.install.skip>true</maven.install.skip>

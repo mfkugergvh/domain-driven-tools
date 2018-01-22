@@ -1,0 +1,1 @@
+package io.ddd.sample.aak.domain;
